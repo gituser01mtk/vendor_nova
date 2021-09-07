@@ -11,11 +11,11 @@ echo "{"
 echo '"response": ['
 echo "{"
 echo ' "datetime":' "\"$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2)\","
-echo ' "filename":' "\"$(basename $(ls $OUT/ProjectSakura*.zip))\","
-echo ' "id":' "\"$((cat $OUT/ProjectSakura*.zip.md5sum) | cut -d ' ' -f1)\","
+echo ' "filename":' "\"$(basename $(ls $OUT/Nova_UI*.zip))\","
+echo ' "id":' "\"$((cat $OUT/Nova_UI*.zip.md5sum) | cut -d ' ' -f1)\","
 echo ' "romtype":'"\"nightly\","
-echo ' "size":' "$(stat -c%s $OUT/ProjectSakura*.zip)",
-echo ' "url":' "\"https://master.dl.sourceforge.net/project/projectsakura/$LINEAGE_BUILD/$(basename $(ls $OUT/ProjectSakura*.zip))\","
+echo ' "size":' "$(stat -c%s $OUT/Nova_UI*.zip)",
+echo ' "url":' "\"https://master.dl.sourceforge.net/project/projectsakura/$LINEAGE_BUILD/$(basename $(ls $OUT/Nova_UI*.zip))\","
 echo ' "updater":' "true",
 echo ' "version":' "\"1.0\""
 echo "}"
