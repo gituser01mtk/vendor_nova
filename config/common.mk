@@ -230,7 +230,7 @@ else ifeq ($(NOVA_BUILD_TYPE), microg)
 endif
 
 #OPLauncher
-#ifeq ($(NOVA_OPLAUNCHER), true)
+ifeq ($(NOVA_OPLAUNCHER), true)
     $(call inherit-product, vendor/addons/prebuilt/app/OPLauncher/OPLauncher.mk)
 endif
 
@@ -250,7 +250,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
-# Increase sakura Version with each major release.
+# Increase Nova Version with each major release.
 LINEAGE_VERSION := Nova_UI-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(NOVA_BUILD_ZIP_TYPE)-$(shell date +%Y%m%d-%H%M)-$(LINEAGE_BUILD)-$(NOVA_BUILD)
 LINEAGE_DISPLAY_VERSION := Nova_UI-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-$(NOVA_BUILD)
 NOVA_VERSION := $(LINEAGE_VERSION)
