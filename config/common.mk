@@ -212,7 +212,7 @@ OFFICIAL_DEVICES = $(shell cat vendor/lineage/nova.devices)
 FOUND_DEVICE =  $(filter $(NOVA_BUILD), $(OFFICIAL_DEVICES))
 ifeq ($(FOUND_DEVICE),$(NOVA_BUILD))
       NOVA_BUILD_TYPE := OFFICIAL
-    else
+else
 NOVA_BUILD_TYPE := UNOFFICIAL
       $(error Device is not official "$(CHERISH_BUILD)")
 endif
