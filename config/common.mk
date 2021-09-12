@@ -211,11 +211,18 @@ NOVA_BUILD_ZIP_TYPE := VANILLA
 
 #Official and unofficial for the sake of the world
 ifeq ($(NOVA_OFFICIAL), true)
-include vendor/sakura-priv/keys.mk
-    NOVA_BUILD := OFFICIAL
-    PRODUCT_PACKAGES += \
-    Updater
+
+  OFFICIAL_DEVICES = $(shell cat vendor/lineage/nova.devices)
+  FOUND_DEVICE =  $(filter $(NOVA_BUILD), $(OFFICIAL_DEVICES))
+    ifeq ($(FOUND_DEVICE),$(NOVA_BUILD))
+      NOVA_BUILD_TYPE := OFFICIAL
+    else
+
+NOVA_BUILD_TYPE := UNOFFICIAL
+      $(error Device is not official "$(CHERISH_BUILD)")
+    endif
 endif
+
 
 #build type
 ifeq ($(NOVA_BUILD_TYPE), coregapps)
