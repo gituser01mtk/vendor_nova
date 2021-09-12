@@ -3,9 +3,6 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/nova.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 
-# Bootanimation
-include vendor/lineage/config/bootanimation.mk
-
 PRODUCT_BRAND ?= Nova_UI
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
