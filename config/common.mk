@@ -208,15 +208,20 @@ NOVA_BUILD_ZIP_TYPE := VANILLA
 
 #Official and unofficial for the sake of the world
 #ifeq ($(NOVA_OFFICIAL), true)
+
+# NOVA Release
+ifeq ($(NOVA_BUILD_TYPE), OFFICIAL)
+
 OFFICIAL_DEVICES = $(shell cat vendor/lineage/nova.devices)
 FOUND_DEVICE =  $(filter $(NOVA_BUILD), $(OFFICIAL_DEVICES))
-ifeq ($(FOUND_DEVICE),$(NOVA_BUILD))
+      ifeq ($(FOUND_DEVICE),$(NOVA_BUILD))
       NOVA_BUILD_TYPE := OFFICIAL
-else
+      else
 NOVA_BUILD_TYPE := UNOFFICIAL
       $(error Device is not official "$(CHERISH_BUILD)")
-endif
+      endif
 
+endif
 
 
 #build type
