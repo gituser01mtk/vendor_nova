@@ -220,7 +220,7 @@ ifeq ($(NOVA_OFFICIAL), true)
 
 NOVA_BUILD_TYPE := UNOFFICIAL
       $(error Device is not official "$(CHERISH_BUILD)")
-    endif
+
 endif
 
 
