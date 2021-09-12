@@ -218,7 +218,7 @@ FOUND_DEVICE =  $(filter $(NOVA_BUILD), $(OFFICIAL_DEVICES))
       NOVA_BUILD_TYPE := OFFICIAL
       else
 NOVA_BUILD_TYPE := UNOFFICIAL
-      $(error Device is not official "$(CHERISH_BUILD)")
+      $(error Device is not official "$(NOVA_BUILD)")
       endif
 
 endif
