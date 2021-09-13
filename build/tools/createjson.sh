@@ -15,8 +15,6 @@ echo ' "filename":' "\"$(basename $(ls $OUT/Nova_UI*.zip))\","
 echo ' "id":' "\"$((cat $OUT/Nova_UI*.zip.md5sum) | cut -d ' ' -f1)\","
 echo ' "romtype":'"\"nightly\","
 echo ' "size":' "$(stat -c%s $OUT/Nova_UI*.zip)",
-echo ' "url":' "\"https://master.dl.sourceforge.net/project/projectsakura/$LINEAGE_BUILD/$(basename $(ls $OUT/Nova_UI*.zip))\","
-echo ' "updater":' "true",
 echo ' "version":' "\"1.0\""
 echo "}"
 echo "]"
