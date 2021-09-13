@@ -206,23 +206,12 @@ PRODUCT_VERSION_MINOR = 0
 NOVA_BUILD := UNOFFICIAL
 NOVA_BUILD_ZIP_TYPE := VANILLA
 
-#Official and unofficial for the sake of the world
-#ifeq ($(NOVA_OFFICIAL), true)
-
 # NOVA Release
 ifeq ($(NOVA_BUILD_TYPE), OFFICIAL)
-
-OFFICIAL_DEVICES = $(shell cat vendor/lineage/nova.devices)
-FOUND_DEVICE =  $(filter $(NOVA_BUILD), $(OFFICIAL_DEVICES))
-      ifeq ($(FOUND_DEVICE),$(NOVA_BUILD))
-      NOVA_BUILD_TYPE := OFFICIAL
-      else
-NOVA_BUILD_TYPE := UNOFFICIAL
-      $(error Device is not official "$(NOVA_BUILD)")
-      endif
-
+    NOVA_BUILD := OFFICIAL
+    PRODUCT_PACKAGES += \
+    Updater 
 endif
-
 
 #build type
 ifeq ($(NOVA_BUILD_TYPE), coregapps)
