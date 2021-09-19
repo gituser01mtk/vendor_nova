@@ -127,6 +127,12 @@ PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
     LineageSetupWizard
+    
+# PUBG ROM NOVA PACKAGES
+PRODUCT_PACKAGES += \
+    Snapdragon888 \
+    Dimensity2000+ \
+    Apple A15 Bionic
 
 # Themes
 PRODUCT_PACKAGES += \
