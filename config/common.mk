@@ -3,7 +3,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/nova.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 
-PRODUCT_BRAND ?= Nova_UI
+PRODUCT_BRAND ?= PUBG_ROM
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -247,8 +247,8 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Increase Nova Version with each major release.
-LINEAGE_VERSION := Nova_UI-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(NOVA_BUILD_ZIP_TYPE)-$(shell date +%Y%m%d-%H%M)-$(LINEAGE_BUILD)-$(NOVA_BUILD)
-LINEAGE_DISPLAY_VERSION := Nova_UI-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-$(NOVA_BUILD)
+LINEAGE_VERSION := PUBG-OS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(NOVA_BUILD_ZIP_TYPE)-$(shell date +%Y%m%d-%H%M)-$(LINEAGE_BUILD)
+LINEAGE_DISPLAY_VERSION := PUBGOS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-$(NOVA_BUILD)
 NOVA_VERSION := $(LINEAGE_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
